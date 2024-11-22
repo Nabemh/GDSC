@@ -10,7 +10,7 @@ def calculate_hash(password):
 
 def subscribe(user_name, password):
     """Registers a new user account."""
-    account = "User_name: " + user_name + '\n' + 'Password: ' + calculate_hash(password) + '\n'
+    account = user_name + ': ' + calculate_hash(password) + '\n'
     try:
         with open('accounts.txt', 'w') as f:
             f.write(account)
